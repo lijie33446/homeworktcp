@@ -33,18 +33,18 @@ static const uint qt_meta_data_Dialog[] = {
       16,    8,    7,    7, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      55,   41,    7,    7, 0x0a,
-      83,    7,    7,    7, 0x08,
-     117,  100,    7,    7, 0x08,
-     140,    7,    7,    7, 0x08,
-     150,    7,    7,    7, 0x08,
+      58,   41,    7,    7, 0x0a,
+      90,    7,    7,    7, 0x08,
+     124,  107,    7,    7, 0x08,
+     147,    7,    7,    7, 0x08,
+     157,    7,    7,    7, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Dialog[] = {
     "Dialog\0\0data,id\0sendData(QByteArray,int)\0"
-    "peerHost,data\0revData(QString,QByteArray)\0"
+    "peerHost,data,id\0revData(QString,QByteArray,int)\0"
     "showConnection()\0socketDescriptor\0"
     "showDisconnection(int)\0sendMsg()\0"
     "clearMsg()\0"
@@ -57,7 +57,7 @@ void Dialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         Dialog *_t = static_cast<Dialog *>(_o);
         switch (_id) {
         case 0: _t->sendData((*reinterpret_cast< QByteArray(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2]))); break;
+        case 1: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 2: _t->showConnection(); break;
         case 3: _t->showDisconnection((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: _t->sendMsg(); break;

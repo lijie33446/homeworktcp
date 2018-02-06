@@ -24,7 +24,7 @@ signals:
     void sendData(QByteArray data, int id);
 
 public slots:
-    void revData(QString peerHost, QByteArray data);
+    void revData(QString peerHost, QByteArray data, int id);
 
 private slots:
     void showConnection();
@@ -39,7 +39,6 @@ private:
 
     Server *server;
 
-    QTimer *timer;
 };
 
 #endif // DIALOG_H

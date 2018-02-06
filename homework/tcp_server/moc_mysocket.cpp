@@ -30,17 +30,17 @@ static const uint qt_meta_data_MySocket[] = {
        1,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
-      12,   10,    9,    9, 0x05,
+      13,   10,    9,    9, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      40,    9,    9,    9, 0x0a,
-      58,   51,    9,    9, 0x0a,
+      45,    9,    9,    9, 0x0a,
+      63,   56,    9,    9, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MySocket[] = {
-    "MySocket\0\0,\0revData(QString,QByteArray)\0"
+    "MySocket\0\0,,\0revData(QString,QByteArray,int)\0"
     "recvData()\0msg,id\0sendMsg(QByteArray,int)\0"
 };
 
@@ -50,7 +50,7 @@ void MySocket::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         Q_ASSERT(staticMetaObject.cast(_o));
         MySocket *_t = static_cast<MySocket *>(_o);
         switch (_id) {
-        case 0: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2]))); break;
+        case 0: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 1: _t->recvData(); break;
         case 2: _t->sendMsg((*reinterpret_cast< QByteArray(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
@@ -98,9 +98,9 @@ int MySocket::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void MySocket::revData(QString _t1, QByteArray _t2)
+void MySocket::revData(QString _t1, QByteArray _t2, int _t3)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

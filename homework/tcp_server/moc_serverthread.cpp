@@ -30,23 +30,23 @@ static const uint qt_meta_data_serverThread[] = {
        3,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
-      16,   14,   13,   13, 0x05,
-      52,   44,   13,   13, 0x05,
-      76,   13,   13,   13, 0x05,
+      17,   14,   13,   13, 0x05,
+      57,   49,   13,   13, 0x05,
+      81,   13,   13,   13, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      95,   44,   13,   13, 0x08,
-     120,   14,   13,   13, 0x08,
-     149,   13,   13,   13, 0x08,
+     100,   49,   13,   13, 0x08,
+     125,   14,   13,   13, 0x08,
+     158,   13,   13,   13, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_serverThread[] = {
-    "serverThread\0\0,\0revData(QString,QByteArray)\0"
+    "serverThread\0\0,,\0revData(QString,QByteArray,int)\0"
     "data,id\0sendDat(QByteArray,int)\0"
     "disconnectTCP(int)\0sendData(QByteArray,int)\0"
-    "recvData(QString,QByteArray)\0"
+    "recvData(QString,QByteArray,int)\0"
     "disconnectToHost()\0"
 };
 
@@ -56,11 +56,11 @@ void serverThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_ASSERT(staticMetaObject.cast(_o));
         serverThread *_t = static_cast<serverThread *>(_o);
         switch (_id) {
-        case 0: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2]))); break;
+        case 0: _t->revData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 1: _t->sendDat((*reinterpret_cast< QByteArray(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 2: _t->disconnectTCP((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->sendData((*reinterpret_cast< QByteArray(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 4: _t->recvData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2]))); break;
+        case 4: _t->recvData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QByteArray(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         case 5: _t->disconnectToHost(); break;
         default: ;
         }
@@ -107,9 +107,9 @@ int serverThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void serverThread::revData(QString _t1, QByteArray _t2)
+void serverThread::revData(QString _t1, QByteArray _t2, int _t3)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 

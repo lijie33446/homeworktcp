@@ -24,5 +24,5 @@ void MySocket::recvData()
     QString temp = peerAddress().toString();
     peerAddr = temp.remove(0, 7);
 
-    emit revData(peerAddr, data);
+    emit revData(peerAddr, data, socketDescriptor);
 }

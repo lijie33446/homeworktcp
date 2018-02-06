@@ -13,7 +13,7 @@ public:
     explicit MySocket(int socket, QObject *parent = 0);
 
 signals:
-    void revData(QString, QByteArray);
+    void revData(QString, QByteArray, int);
 public slots:
     void recvData();
     void sendMsg(QByteArray msg, int id);

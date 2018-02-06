@@ -19,7 +19,7 @@ void serverThread::run()
         return ;
 
     connect(socket, SIGNAL(disconnected()), this, SLOT(disconnectToHost()));
-    connect(socket, SIGNAL(revData(QString, QByteArray)), this, SLOT(recvData(QString, QByteArray)));
+    connect(socket, SIGNAL(revData(QString, QByteArray, int)), this, SLOT(recvData(QString, QByteArray, int)));
     connect(this, SIGNAL(sendDat(QByteArray, int)), socket, SLOT(sendMsg(QByteArray, int)));
 
     exec();
@@ -33,9 +33,9 @@ void serverThread::sendData(QByteArray data, int id)
     emit sendDat(data, id);
 }
 
-void serverThread::recvData(QString peerAddr, QByteArray data)
+void serverThread::recvData(QString peerAddr, QByteArray data, int id)
 {
-    emit revData(peerAddr, data);
+    emit revData(peerAddr, data, id);
 }
 
 void serverThread::disconnectToHost()

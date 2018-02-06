@@ -20,7 +20,7 @@ void Server::incomingConnection(int socketDescriptor)
 
     connect(thread, SIGNAL(started()), dialog, SLOT(showConnection()));
     connect(thread, SIGNAL(disconnectTCP(int)), dialog, SLOT(showDisconnection(int)));
-    connect(thread, SIGNAL(revData(QString, QByteArray)), dialog, SLOT(revData(QString, QByteArray)));
+    connect(thread, SIGNAL(revData(QString, QByteArray, int)), dialog, SLOT(revData(QString, QByteArray, int)));
     connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
     connect(dialog, SIGNAL(sendData(QByteArray, int)), thread, SLOT(sendData(QByteArray, int)));
 

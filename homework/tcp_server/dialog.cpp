@@ -5,7 +5,7 @@
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Dialog), count(0), timer(new QTimer)
+    ui(new Ui::Dialog), count(0)
 {
     ui->setupUi(this);
 
@@ -17,7 +17,6 @@ Dialog::Dialog(QWidget *parent) :
 
     connect(ui->sendBtn, SIGNAL(clicked()), this, SLOT(sendMsg()));
     connect(ui->clearBtn, SIGNAL(clicked()), this, SLOT(clearMsg()));
-    connect(timer, SIGNAL(timeout()), this, SLOT(sendLoopMessage()));
 }
 
 Dialog::~Dialog()
@@ -95,8 +94,11 @@ void stringToHtml(QString &str, QColor color)
 }
 
 
-void Dialog::revData(QString peerAddr, QByteArray data)
+void Dialog::revData(QString peerAddr, QByteArray data, int id)
 {
+    if(id!=(ui->objectBox->currentText().toInt()))
+        return;
+
     QString msg;
 
 

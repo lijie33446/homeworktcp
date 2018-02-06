@@ -22,13 +22,13 @@ public:
     int socketDescriptor;    
 
 signals:
-    void revData(QString, QByteArray);
+    void revData(QString, QByteArray, int);
     void sendDat(QByteArray data, int id);
     void disconnectTCP(int );
 
 private slots:   
     void sendData(QByteArray data, int id);
-    void recvData(QString, QByteArray);
+    void recvData(QString, QByteArray, int);
     void disconnectToHost();
 
 private:
